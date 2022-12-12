@@ -14,6 +14,7 @@ const popupBtn = document.querySelector('.popup-close');
 clearBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 
+	//iterowanie po tablicy wszystkich inputów i czyszczenie ich zawartości oraz błędów
 	[userInput, passInput, rpassInput, emailInput].forEach((el) => {
 		el.value = '';
 		const formBox = el.parentElement;
@@ -44,14 +45,16 @@ const clearError = (input) => {
 	formBox.classList.remove('error');
 };
 
-const checkLength = (input, regex) => {
-	if (input.value.length < regex) {
+//len określa wymaganą długość input'a
+const checkLength = (input, len) => {
+	if (input.value.length < len) {
 		showError(
 			input,
+			//wpisywanie do błędu label'i (z usuniętym dwukropkiem) oraz wymaganej długości
 			`${input.previousElementSibling.innerText.slice(
 				0,
 				-1
-			)} musi mieć min. ${regex} znaków!`
+			)} musi mieć min. ${len} znaków!`
 		);
 	}
 };
