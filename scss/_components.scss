@@ -1,5 +1,12 @@
+@use 'colors' as colors;
+
 .wrapper {
     margin: 0 auto;
-    width: 100%;
+    padding: 2rem;
+    width: 450px;
     max-width: 1200px;
+    font-size: 1.6rem;
+    background-color: colors.$white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.732);
+    border-radius: 8px;
 }

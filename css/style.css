@@ -9,6 +9,9 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   font-family: sans-serif;
   background-image: radial-gradient(circle at center, rgb(49, 71, 136), rgb(79, 101, 167));
@@ -16,6 +19,15 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: 100%;
+  padding: 2rem;
+  width: 450px;
   max-width: 1200px;
+  font-size: 1.6rem;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.732);
+  border-radius: 8px;
+}
+
+form .error-text {
+  color: red;
 }/*# sourceMappingURL=style.css.map */
