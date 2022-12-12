@@ -1,7 +1,121 @@
 @use 'colors' as colors;
 
 form {
-    .error-text {
-        color: colors.$red;
-    }
+	h1 {
+		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	.form-box {
+		margin: 0.4em auto;
+
+		label {
+			display: inline-block;
+			margin-bottom: 0.3em;
+		}
+
+		input {
+			margin-bottom: 0.3em;
+			padding: 0.4em 0.6em;
+			width: 100%;
+			font-size: 1.5rem;
+			border: 1px solid colors.$light-black;
+			border-radius: 5px;
+		}
+
+		.error-text {
+			margin-left: 0.8em;
+			font-size: 1.4rem;
+			color: colors.$red;
+			visibility: hidden;
+		}
+
+		&.error input {
+			border: 1px solid colors.$red;
+			background-color: rgb(255, 99, 71, 0.1);
+		}
+
+		&.error .error-text {
+			visibility: visible;
+		}
+	}
+
+	.control-buttons {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0.5em auto;
+
+		button {
+			display: block;
+			margin-right: 0.5em;
+			padding: 0.4em 0.8em;
+			color: colors.$white;
+			background-color: rgb(79, 101, 167);
+			border: 1px solid colors.$black;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.2s, color 0.2s;
+
+			&:active {
+				box-shadow: inset 1px 1px 3px colors.$light-black;
+			}
+		}
+
+		.clear {
+			&:hover {
+				color: colors.$black;
+				background-color: rgb(255, 99, 71, 0.4);
+			}
+		}
+
+		.send {
+			&:hover {
+				color: colors.$black;
+				background-color: rgb(90, 223, 61, 0.4);
+			}
+		}
+	}
+
+	.popup {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 70px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 2vh auto;
+		padding: 1em;
+        width: clamp(200px, 400px, 70%);
+		height: 100px;
+		background-color: rgb(222, 222, 243);
+		border-radius: 8px;
+		border: 2px solid black;
+
+		p {
+			margin-bottom: 0.5em;
+		}
+
+		button {
+			display: block;
+			margin-right: 0.5em;
+			padding: 0.4em 0.8em;
+			color: colors.$white;
+			background-color: rgb(79, 101, 167);
+			border: 1px solid colors.$black;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.2s, color 0.2s;
+
+			&:active {
+				box-shadow: inset 1px 1px 3px colors.$light-black;
+			}
+
+			&:hover {
+				color: colors.$black;
+				background-color: rgb(65, 134, 225, 0.5);
+			}
+		}
+	}
 }
