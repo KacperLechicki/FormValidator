@@ -6,7 +6,7 @@ const rpassInput = document.querySelector('#r_password');
 const emailInput = document.querySelector('#email');
 
 const clearBtn = document.querySelector('.clear');
-const senBtn = document.querySelector('.send');
+const sendBtn = document.querySelector('.send');
 
 const popup = document.querySelector('.popup');
 const popupBtn = document.querySelector('.popup-close');
@@ -16,5 +16,36 @@ clearBtn.addEventListener('click', (e) => {
 
 	[userInput, passInput, rpassInput, emailInput].forEach((el) => {
 		el.value = '';
+		const formBox = el.parentElement;
+		formBox.classList.remove('error');
 	});
+});
+
+const checkForm = (input) => {
+	input.forEach((el) => {
+		if (el.value === '') {
+			showError(el, el.placeholder);
+		} else {
+			clearError(el);
+		}
+	});
+};
+
+const showError = (input, msg) => {
+	const formBox = input.parentElement;
+	const errorMsg = formBox.querySelector('.error-text');
+
+	formBox.classList.add('error');
+	errorMsg.textContent = msg;
+};
+
+const clearError = (input) => {
+	const formBox = input.parentElement;
+	formBox.classList.remove('error');
+};
+
+sendBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	checkForm([userInput, passInput, rpassInput, emailInput]);
 });
