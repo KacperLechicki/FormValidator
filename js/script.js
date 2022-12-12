@@ -10,3 +10,11 @@ const senBtn = document.querySelector('.send');
 
 const popup = document.querySelector('.popup');
 const popupBtn = document.querySelector('.popup-close');
+
+clearBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	[userInput, passInput, rpassInput, emailInput].forEach((el) => {
+		el.value = '';
+	});
+});
