@@ -1,0 +1,21 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-image: radial-gradient(circle at center, rgb(49, 71, 136), rgb(79, 101, 167));
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}/*# sourceMappingURL=style.css.map */
