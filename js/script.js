@@ -69,6 +69,24 @@ const checkMail = (email) => {
 	}
 };
 
+//jeśli nie ma błędów, to pokaż popup
+const checkErrors = () => {
+	const formBoxes = document.querySelectorAll('.form-box');
+	let errorCount = 0;
+
+	formBoxes.forEach((el) => {
+		if (el.classList.contains('error')) {
+			errorCount++;
+		}
+	});
+
+	console.log(errorCount)
+
+	if (errorCount === 0) {
+		popup.classList.add('show-popup');
+	}
+};
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
@@ -92,4 +110,5 @@ sendBtn.addEventListener('click', (e) => {
 	checkLength(passInput, 8);
 	checkPasswrds(passInput, rpassInput);
 	checkMail(emailInput);
+	checkErrors();
 });
