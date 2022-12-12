@@ -50,7 +50,7 @@ form .form-box input {
 }
 form .form-box .error-text {
   margin-left: 0.8em;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: red;
   visibility: hidden;
 }

@@ -44,8 +44,29 @@ const clearError = (input) => {
 	formBox.classList.remove('error');
 };
 
+const checkLength = (input, regex) => {
+	if (input.value.length < regex) {
+		showError(
+			input,
+			`${input.previousElementSibling.innerText.slice(
+				0,
+				-1
+			)} musi mieć min. ${regex} znaków!`
+		);
+	}
+};
+
+const checkPasswrds = (pass1, pass2) => {
+	if (pass1.value !== pass2.value) {
+		showError(pass2, 'Hasła muszą być jednakowe!');
+	}
+};
+
 sendBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 
 	checkForm([userInput, passInput, rpassInput, emailInput]);
+	checkLength(userInput, 5);
+	checkLength(passInput, 8);
+	checkPasswrds(passInput, rpassInput);
 });
