@@ -11,16 +11,9 @@ const sendBtn = document.querySelector('.send');
 const popup = document.querySelector('.popup');
 const popupBtn = document.querySelector('.popup-close');
 
-clearBtn.addEventListener('click', (e) => {
-	e.preventDefault();
-
-	//iterowanie po tablicy wszystkich inputów i czyszczenie ich zawartości oraz błędów
-	[userInput, passInput, rpassInput, emailInput].forEach((el) => {
-		el.value = '';
-		const formBox = el.parentElement;
-		formBox.classList.remove('error');
-	});
-});
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 
 const checkForm = (input) => {
 	input.forEach((el) => {
@@ -64,6 +57,21 @@ const checkPasswrds = (pass1, pass2) => {
 		showError(pass2, 'Hasła muszą być jednakowe!');
 	}
 };
+
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+
+clearBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	//iterowanie po tablicy wszystkich inputów i czyszczenie ich zawartości oraz błędów
+	[userInput, passInput, rpassInput, emailInput].forEach((el) => {
+		el.value = '';
+		const formBox = el.parentElement;
+		formBox.classList.remove('error');
+	});
+});
 
 sendBtn.addEventListener('click', (e) => {
 	e.preventDefault();
