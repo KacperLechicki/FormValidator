@@ -11,6 +11,43 @@
 
 <body>
 
+    <div class="wrapper">
+        <form>
+            <h1>Zarejestruj się!</h1>
+
+            <div class="form-box">
+                <label for="username">Nazwa użytkownika:</label>
+                <input type="text" id="username" placeholder="Nazwa użytkownika...">
+                <p class="error-text">error</p>
+            </div>
+            <div class="form-box">
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" placeholder="Hasło...">
+                <p class="error-text">error</p>
+            </div>
+            <div class="form-box">
+                <label for="r_password">Powtórz hasło:</label>
+                <input type="password" id="r_password" placeholder="Powtórz hasło...">
+                <p class="error-text">error</p>
+            </div>
+            <div class="form-box">
+                <label for="email">Adres e-mail:</label>
+                <input type="email" id="email" placeholder="Adres e-mail...">
+                <p class="error-text">error</p>
+            </div>
+
+            <div class="control-buttons">
+                <button class="clear">Wyczyść</button>
+                <button class="send">Wyślij</button>
+            </div>
+
+            <div class="popup">
+                <p class="popup-text">Formularz został poprawnie wysłany!</p>
+                <button class="popup-close">Zamknij</button>
+            </div>
+        </form>
+    </div>
+
     <script src="./js/script.js"></script>
 </body>
 
