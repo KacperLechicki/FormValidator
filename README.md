@@ -1,6 +1,6 @@
 ==> https://kacperlechicki.github.io/FormValidator/ <==
 
-#FormValidator
+# FormValidator
 Form submission simulation
 
 ![Zrzut ekranu 2022-12-12 o 17 33 51](https://user-images.githubusercontent.com/118530164/207101290-ec700a64-fca8-4972-b2b1-cb1d907b9586.png)
