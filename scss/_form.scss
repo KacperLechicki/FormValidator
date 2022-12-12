@@ -48,16 +48,16 @@ form {
 		button {
 			display: block;
 			margin-right: 0.5em;
-			padding: 0.4em 0.8em;
+			padding: 0.5em 1em;
 			color: colors.$white;
 			background-color: rgb(79, 101, 167);
-			border: 1px solid colors.$black;
+			border: none;
 			border-radius: 5px;
 			cursor: pointer;
 			transition: background-color 0.2s, color 0.2s;
 
 			&:active {
-				box-shadow: inset 1px 1px 3px colors.$light-black;
+				box-shadow: inset 2px 2px 3px colors.$light-black;
 			}
 		}
 
@@ -71,7 +71,7 @@ form {
 		.send {
 			&:hover {
 				color: colors.$black;
-				background-color: rgb(90, 223, 61, 0.4);
+				background-color: rgba(42, 183, 10, 0.4);
 			}
 		}
 	}
@@ -102,16 +102,16 @@ form {
 		button {
 			display: block;
 			margin-right: 0.5em;
-			padding: 0.4em 0.8em;
+			padding: 0.5em 1em;
 			color: colors.$white;
 			background-color: rgb(79, 101, 167);
-			border: 1px solid colors.$black;
+			border: none;
 			border-radius: 5px;
 			cursor: pointer;
 			transition: background-color 0.2s, color 0.2s;
 
 			&:active {
-				box-shadow: inset 1px 1px 3px colors.$light-black;
+				box-shadow: inset 2px 2px 3px colors.$light-black;
 			}
 
 			&:hover {
