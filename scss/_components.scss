@@ -1,13 +1,13 @@
 @use 'colors' as colors;
 
 .wrapper {
+    position: relative;
     margin: 0 5vw;
     padding: 3rem;
     width: clamp(100px, 450px, 1200px);
-    height: auto;
     font-size: 1.6rem;
     background-color: colors.$white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.732);
     border-radius: 8px;
-    overflow: auto;
+    overflow: hidden;
 }

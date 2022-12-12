@@ -25,7 +25,7 @@ form {
 
 		.error-text {
 			margin-left: 0.8em;
-			font-size: 1.2rem;
+			font-size: 1rem;
 			color: colors.$red;
 			visibility: hidden;
 		}
@@ -82,27 +82,21 @@ form {
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		top: -300px;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		margin: 2vh auto;
-		padding: 1em;
-		width: clamp(250px, 400px, 70%);
-		height: 100px;
+		width: 100%;
+		height: 100%;
 		background-color: rgb(222, 222, 243);
 		border-radius: 8px;
-		border: 2px solid black;
-        opacity: 0;
-		transition: top 2s, opacity 2s;
+		opacity: 0;
+		transition: opacity 2s;
 
 		p {
-			margin-bottom: 0.5em;
+			margin-bottom: 1em;
 		}
 
 		button {
 			display: block;
 			margin-right: 0.5em;
-			padding: 0.5em 1em;
+			padding: 0.7em 1.4em;
 			color: colors.$white;
 			background-color: rgb(79, 101, 167);
 			border: none;
@@ -122,8 +116,9 @@ form {
 	}
 
 	.show-popup {
+		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
-        opacity: 1;
+		opacity: 1;
 	}
 }
